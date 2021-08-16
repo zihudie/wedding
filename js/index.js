@@ -44,7 +44,9 @@ window.onload = function(){
         coverObj.classList.add("shade-out")
         coverObj.classList.remove("shade-in")
         weddingCons.classList.add("shade-in")
-        audioObj1.play()
+        setTimeout(() => {
+            audioObj1.play()
+        }, 800);
         
     }
 
