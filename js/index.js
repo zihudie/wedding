@@ -1,8 +1,4 @@
 
- 
-
-
-
 window.onload = function(){
     let timer = null 
     const weddingCons = document.getElementById("weddingCons")
