@@ -8,7 +8,10 @@ window.onload = function(){
     const weddingCons = document.getElementById("weddingCons")
     const  envelope = document.getElementById("envelope")
     const audioObj = document.getElementById("audio")
+    const audioObj1 = document.getElementById("audio1")
     const joinBtn = document.getElementById("join")
+    const musicBtn = document.getElementById("music")
+
     const coverObj = document.getElementById("cover")
     const dom  = document.getElementById("coverInner")
     const myText =`亲 爱 的 家 人 , 朋 友 你 们 好 : <br/> 我 们 即 将 在 2 0 2 1 年 1 0 月 0 2 号 举 办 婚 礼 <br/>
@@ -19,7 +22,6 @@ window.onload = function(){
         if (index < data.length) {
             dom.innerHTML += data[index]
             setTimeout(writing.bind(this), 200, ++index)
-            // audio.trigger('play');
             
         }else{
             audioObj.pause()
@@ -42,7 +44,20 @@ window.onload = function(){
         coverObj.classList.add("shade-out")
         coverObj.classList.remove("shade-in")
         weddingCons.classList.add("shade-in")
+        audioObj1.play()
+        
     }
+
+    musicBtn.onclick = function(){
+        if(this.classList.contains("active")){
+            audioObj1.pause()
+            this.classList.remove("active")
+        }else{
+            this.classList.add("active")
+            audioObj1.play()
+        }
+    }
+
 
     // 倒计时
 
@@ -98,7 +113,7 @@ function  getDate(time,dom){
    }
    function getTime(){
        const timeCon  = document.getElementById("weddingTime")
-       const time = new Date('2021-10-02 18:00').getTime()
+       const time = new Date('2021/10/02 18:00').getTime()
        getDate(time,timeCon)
        timer = setInterval(() => {
            getDate(time,timeCon)

@@ -157,7 +157,8 @@ img{
     height: 100%;
     transform: translateX(100%);
     transition: .35s;
-     
+    background: #fff;
+    border-radius: 100%;
 }
 
 .wedding-inner{
@@ -168,6 +169,19 @@ img{
 .top{
     margin-top: 30px;
     margin-bottom: 30px;
+}
+.music{
+    width:32px;
+    height: 32px;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    z-index: 99;
+    background: #fff;
+    border-radius: 100%;
+}
+.music.active{
+    animation: circle infinite linear 3s forwards;
 }
 .big-pic{
     position: relative;
@@ -180,10 +194,10 @@ img{
 .big-pic .memo{
     position: absolute;
     z-index: 15;
-    right: 30px;
-    bottom: 10px;
+    left: 12px;
+    bottom: 36px;
     width: 76px;
-    animation: circle infinite linear 10s forwards; 
+    /* animation: circle infinite linear 10s forwards;  */
 }
 @keyframes circle{
     0%{
