@@ -343,6 +343,7 @@ img {
 
 .groom-bride .desc {
     flex: 1;
+    font-weight: 800;
     /* border:1px solid rgba(186,219,196,.2); */
     border-radius: 4px;
     background: rgba(186, 219, 196, .3);
